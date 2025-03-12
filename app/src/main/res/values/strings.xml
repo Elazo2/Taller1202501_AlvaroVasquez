@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Taller1202501</string>
+    <string name="incrementar">Incrementar</string>
+    <string name="decrementar">Decrementar</string>
+    <string name="hola">Hola</string>
+    <string name="taller_1">Taller 1</string>
+</resources>

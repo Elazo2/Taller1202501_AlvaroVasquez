@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fuentes">
+        <item>sans-serif</item>
+        <item>sans-serif-light</item>
+        <item>sans-serif-condensed</item>
+        <item>serif</item> <!-- Times New Roman -->
+        <item>monospace</item> <!-- Courier New -->
+    </string-array>
+</resources>
