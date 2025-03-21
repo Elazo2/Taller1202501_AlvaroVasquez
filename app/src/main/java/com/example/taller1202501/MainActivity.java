@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.graphics.Color;
+import java.util.Random;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
         t1 = findViewById(R.id.texto1);
         spinnerFuentes = findViewById(R.id.spinner); //
 
-        // Configurar adaptador del Spinner con el array de fuentes
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.fuentes, android.R.layout.simple_spinner_item
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFuentes.setAdapter(adapter);
 
-        // Manejar la selección del Spinner para cambiar la fuente
         spinnerFuentes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // No hacer nada si no se selecciona nada
             }
         });
 
@@ -69,7 +69,11 @@ public class MainActivity extends AppCompatActivity {
 
         t1.setTextSize(tamano);
     }
-
+    public void CambiarColor(View view) {
+        Random random = new Random();
+        int colorAleatorio = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+        t1.setTextColor(colorAleatorio);
+    }
     public void Decrementar(View view) {
         String cadena = c1.getText().toString();
         t1.setText(cadena);
